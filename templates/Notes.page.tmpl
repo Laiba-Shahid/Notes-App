@@ -1,12 +1,70 @@
 {{template "base" .}}
 
 {{define "content"}}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>This is the Notes page </h1>
-                <p>This is some text</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+      <nav class="navbar">
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </div>
+        </nav>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Buddy</h1>
+            </div>
+            <div class="sidebar-content">
+                <button class="add-button">+</button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <input type="text" placeholder="Search" class="search-bar">
+            </header>
+            <section class="notes-section">
+                <h2>Dear Diary...</h2>
+                <div class="notes-grid">
+                    <div class="note yellow">
+                        <h3>The beginning of screenless design...</h3>
+                        <p>May 21, 2020</p>
+                    </div>
+                    <div class="note red">
+                        <h3>13 Things You Should Give Up...</h3>
+                        <p>May 25, 2020</p>
+                    </div>
+                    <div class="note green">
+                        <h3>The Psychology Principles...</h3>
+                        <p>June 5, 2020</p>
+                    </div>
+                    <div class="note purple">
+                        <h3>10 UI & UX Lessons...</h3>
+                        <p></p>
+                    </div>
+                    <div class="note light-green">
+                        <h3>52 Research Terms...</h3>
+                        <p></p>
+                    </div>
+                    <div class="note blue">
+                        <h3>Text fields & Forms design...</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
+</body>
 {{end}}

@@ -17,6 +17,15 @@ func Routes(config *config.AppConfig) http.Handler {
 	mux.Use(NoSurf(config))
 	mux.Use(middleware.Recoverer)
 	mux.Use(SessionLoad(config))
+
+	// Create a file server that serves files from the "./static/" directory.
+	fileserver := http.FileServer(http.Dir("./static/"))
+
+	// Handle requests with the "/static/*" pattern.
+	// Strip the "/static" prefix from the request URL and pass it to the file server.
+	mux.Handle("/static/*", http.StripPrefix("/static", fileserver))
+
+	//routes for the application
 	mux.Get("/", handlers.Repo.Home)
 	mux.Get("/about", handlers.Repo.About)
 

@@ -1,0 +1,153 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #f7f7f7;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  max-width: 100% !important;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 0 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-header {
+  margin-top: 20px;
+}
+
+.sidebar-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.sidebar-content {
+  margin: 50px;
+}
+
+.add-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-bar {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.notes-section {
+  margin-top: 20px;
+}
+
+.notes-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.note {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.note h3 {
+  margin-top: 0;
+}
+
+.note p {
+  margin: 10px 0 0 0;
+  color: #555;
+}
+
+.yellow {
+  background-color: #ffeb3b;
+}
+
+.red {
+  background-color: #ff7043;
+}
+
+.green {
+  background-color: #aed581;
+}
+
+.purple {
+  background-color: #9575cd;
+}
+
+.light-green {
+  background-color: #dce775;
+}
+
+.blue {
+  background-color: #4fc3f7;
+}
