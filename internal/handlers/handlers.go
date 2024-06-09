@@ -29,17 +29,36 @@ func NewHandlers(r *Repository) {
 
 // Home is the handler for the home page
 func (m *Repository) Home(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, "notes.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "notes.page.tmpl", &models.TemplateData{})
 }
 
-// About is the handler for the about page
-func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
+// Login is the handler for the about page
+func (m *Repository) Login(w http.ResponseWriter, r *http.Request) {
 	// perform some logic
 	stringMap := make(map[string]string)
 	stringMap["test"] = "Hello, again"
 
 	// send data to the template
-	render.RenderTemplate(w, "login.page.tmpl", &models.TemplateData{
+	render.RenderTemplate(w, r, "login.page.tmpl", &models.TemplateData{
 		StringMap: stringMap,
 	})
+}
+
+// Login is the handler for the about page
+func (m *Repository) SignUp(w http.ResponseWriter, r *http.Request) {
+	// perform some logic
+	stringMap := make(map[string]string)
+	stringMap["test"] = "Hello, again"
+
+	// send data to the template
+	render.RenderTemplate(w, r, "signup.page.tmpl", &models.TemplateData{
+		StringMap: stringMap,
+	})
+}
+
+// Postlogin is the handler for the about page
+func (m *Repository) PostLogin(w http.ResponseWriter, r *http.Request) {
+	// perform some logic
+	w.Write([]byte("Posted to login"))
+
 }

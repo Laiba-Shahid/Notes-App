@@ -27,7 +27,11 @@ func Routes(config *config.AppConfig) http.Handler {
 
 	//routes for the application
 	mux.Get("/", handlers.Repo.Home)
-	mux.Get("/about", handlers.Repo.About)
+
+	mux.Get("/signup", handlers.Repo.SignUp)
+
+	mux.Get("/login", handlers.Repo.Login)
+	mux.Post("/login", handlers.Repo.PostLogin)
 
 	return mux
 

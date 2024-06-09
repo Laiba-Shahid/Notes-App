@@ -1,18 +1,13 @@
 {{template "base" .}}
 
 {{define "content"}}
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes App</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-      <nav class="navbar">
-            <div class="logo">Logo</div>
+
+       <nav class="navbar">
+            <div class="logo">Buddy</div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+  
+        <!-- add navlinks here -->
+
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -20,13 +15,12 @@
                 <span></span>
             </div>
         </nav>
-</head>
-<body>
+
     <div class="container">
         <aside class="sidebar">
-            <div class="sidebar-header">
+                <!--    <div class="sidebar-header">
                 <h1>Buddy</h1>
-            </div>
+            </div> -->
             <div class="sidebar-content">
                 <button class="add-button">+</button>
             </div>
@@ -66,5 +60,4 @@
             </section>
         </main>
     </div>
-</body>
 {{end}}
